@@ -1,0 +1,107 @@
+body {
+	margin: 0;
+	padding: 0;
+	background: #262626;
+}
+.box {
+	
+	position: absolute;
+	top: 25%;
+	left: 50%;
+	transform: translate(-50%,50%);
+	width: 200px;
+	padding: 20px;
+	background: #000;
+	color: #fff;
+	text-align: center;
+	text-shadow: 1px 10px 30px rgb(0, 0, 0);
+	border-radius: 54px;
+	overflow: hidden;
+}
+.box::before {
+	content: '';
+	position: absolute;
+	top: 0%;
+	left: -39%;
+	width: 100%;
+	height: 100%;
+	background: rgba(255, 255, 255, 0.1);
+	border-radius: 55px;
+	pointer-events: none;
+}
+.box p {
+	padding: 0;
+	margin: 0;
+	color: #000cff;
+	font-size: 30px;
+}
+.box p {
+	padding: 0;
+	margin: 0;
+	color: #000cff;
+	font-size: 30px;
+}
+.box label {
+	position: relative;
+	cursor: pointer;
+}
+.box label input{
+	display: none;
+}
+.box label span {
+	position: relative;
+	display: inline-block;
+	margin: 20px 10px;
+	width: 50px;
+	background: #000;
+	border: 1px solid #f00;
+	padding: 2px;
+	color: #f00;
+	border-radius: 15px;
+}
+.box label input:checked ~ span {
+	color: #fff;
+	border: 1px solid #fff;
+}
+.box label input:checked ~ span::before {
+	content: '';
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: #fff;
+	z-index: -1;
+	filter: blur(10px);
+}
+.box label input:checked ~ span::after {
+	content: '';
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: #fff;
+	z-index: -1;
+	filter: blur(15px);
+}
+.box label input:checked ~ span.Yes {
+	color: #0030ff;
+	border: 2px dotted #fff;
+	box-shadow: 0 0 10px #f0ff00;
+}
+.box label input:checked ~ span.Yes::before,
+.box label input:checked ~ span.Yes::after
+{
+    background: #62ff00;
+}
+.box label input:checked ~ span.No {
+	color: #0030ff;
+	border: 2px dotted #fff;
+	box-shadow: 0 0 10px #f0ff00;
+}
+.box label input:checked ~ span.No::before,
+.box label input:checked ~ span.No::after
+{
+    background: #62ff00;
+}
